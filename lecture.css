@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    
+}
+
+.left{
+    display: flex;
+
+}
+
+ul{
+list-style: none;
+}
+
+#small{
+    display: none;
+}
+
+.logo{
+    font-size: 2.1rem;
+    width: 130px;
+
+}
+
+.brands{
+  display: flex;
+   width: 220px; 
+   
+}
+.brands li {
+     width: 50%; 
+    border: 1px solid rgb(130, 129, 129);
+}
+
+.nav .brands li, .nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons {
+    width: 200px;
+    border: 1px solid green;
+    display: flex;
+}
+
+.icons li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    width: 26%;
+}
+
+.search-box {
+    width: calc(100% - 600px);
+     position: relative; 
+    align-self: center;
+     z-index: 800;  
+}
+.search-box .search {
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+     outline: none;
+    border: none;
+    padding-left: 8px;
+    padding-right: 35px; 
+}
+.search-box .fa-magnifying-glass {
+     position: absolute; 
+    color: black;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+.nav .bars {
+    display: none;
+} 
+
+.mobile-nav-container{
+    display: none;
+
+}
+
+@media(max-width: 1025px){
+     .brands{
+        display: none;
+     }
+     .search-box{
+        width: calc(100% - 300px);
+     }
+     .nav .bars {
+        display: block;
+         align-self: center;
+        cursor: pointer; 
+    }
+    .nav{
+         padding-left: 30px; 
+         font-size: 1.2rem;
+    }
+    .mobile-nav-container {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        display: block;
+        transition: left 500ms ease-in-out;
+    } 
+   .display-mobile{
+       left: 0;
+       backdrop-filter: brightnes(65%);
+   }
+   .mobile-nav-container .mobile-nav {
+    width: 250px;
+    height: calc(100svh - 50px);
+    background-color: white;
+}
+
+.mobile-nav-container .close {
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-nav-container .btns {
+    display: flex;
+}
+.mobile-nav-container .btns button {
+    width: 50%;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 0;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+
+}
+
